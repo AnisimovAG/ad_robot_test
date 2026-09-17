@@ -32,7 +32,7 @@ class DownloadPictureTestService:
     def speed(self) -> int:
         """Скорость байт в секунду"""
         res = []
-        for i in range(self.DEFAULT_ITERATIONS):
+        for i in range(self.iterations):
             size, t = self._download()
             res.append(size / t.seconds)
         return round(statistics.fmean(res))
